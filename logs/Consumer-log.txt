@@ -1,0 +1,107 @@
+2022-03-08 01:47:59.404  INFO 9905 --- [main] c.r.m.ConsumerServiceApplication         : Starting ConsumerServiceApplication using Java 1.8.0_202 on xx with PID 9905 (/home/evgeniy/IdeaProjects/education-rabbit-consumer/target/classes started by evgeniy in /home/evgeniy/IdeaProjects/education-rabbit-consumer)
+2022-03-08 01:47:59.422  INFO 9905 --- [main] c.r.m.ConsumerServiceApplication         : No active profile set, falling back to default profiles: default
+2022-03-08 01:48:00.815  INFO 9905 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-08 01:48:00.870  INFO 9905 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 1 JPA repository interfaces.
+2022-03-08 01:48:01.393  INFO 9905 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-03-08 01:48:01.401  INFO 9905 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-08 01:48:01.402  INFO 9905 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2022-03-08 01:48:01.468  INFO 9905 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-08 01:48:01.469  INFO 9905 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1951 ms
+2022-03-08 01:48:01.814  INFO 9905 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-08 01:48:01.849  INFO 9905 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-03-08 01:48:01.940  INFO 9905 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-08 01:48:02.016  INFO 9905 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-08 01:48:02.321  INFO 9905 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-08 01:48:02.332  INFO 9905 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2022-03-08 01:48:02.971  WARN 9905 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2022-03-08 01:48:02.972  WARN 9905 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "received_messages" does not exist, skipping
+2022-03-08 01:48:03.028  INFO 9905 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-08 01:48:03.039  INFO 9905 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-08 01:48:04.219  INFO 9905 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-03-08 01:48:04.337  INFO 9905 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-03-08 01:48:04.339  INFO 9905 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-03-08 01:48:04.372  INFO 9905 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#23c7cb18:0/SimpleConnection@2beee3e8 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 37116]
+2022-03-08 01:48:04.458  INFO 9905 --- [main] c.r.m.ConsumerServiceApplication         : Started ConsumerServiceApplication in 5.875 seconds (JVM running for 6.735)
+2022-03-08 01:48:04.761  INFO 9905 --- [RMI TCP Connection(2)-192.168.0.12] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-08 01:48:04.761  INFO 9905 --- [RMI TCP Connection(2)-192.168.0.12] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-08 01:48:04.764  INFO 9905 --- [RMI TCP Connection(2)-192.168.0.12] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-03-08 01:49:53.698  INFO 9905 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.r.m.listener.MessageListener           : Received new message: YOYOYO!
+2022-03-08 01:51:38.079  INFO 9905 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.r.m.listener.MessageListener           : Received new message: YOYOYO!
+2022-03-08 01:55:49.608  INFO 9905 --- [http-nio-8082-exec-2] c.r.m.controller.MessageController       : Fetch all messages
+2022-03-08 01:57:41.985  INFO 9905 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-03-08 01:57:42.168  INFO 9905 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-03-08 01:57:42.200  INFO 9905 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-08 01:57:42.200  INFO 9905 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-03-08 01:57:42.231  INFO 9905 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-08 01:57:42.280  INFO 9905 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-03-08 16:26:06.597  INFO 18234 --- [main] c.r.m.ConsumerServiceApplication         : Starting ConsumerServiceApplication using Java 1.8.0_202 on xx with PID 18234 (/home/evgeniy/IdeaProjects/consumer-service/target/classes started by evgeniy in /home/evgeniy/IdeaProjects/consumer-service)
+2022-03-08 16:26:06.608  INFO 18234 --- [main] c.r.m.ConsumerServiceApplication         : No active profile set, falling back to default profiles: default
+2022-03-08 16:26:09.305  INFO 18234 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-08 16:26:09.404  INFO 18234 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 1 JPA repository interfaces.
+2022-03-08 16:26:10.441  INFO 18234 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-03-08 16:26:10.455  INFO 18234 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-08 16:26:10.456  INFO 18234 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2022-03-08 16:26:10.584  INFO 18234 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-08 16:26:10.585  INFO 18234 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3730 ms
+2022-03-08 16:26:11.412  INFO 18234 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-08 16:26:11.487  INFO 18234 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-03-08 16:26:11.720  INFO 18234 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-08 16:26:11.907  INFO 18234 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-08 16:26:12.474  INFO 18234 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-08 16:26:12.504  INFO 18234 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2022-03-08 16:26:13.833  WARN 18234 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2022-03-08 16:26:13.834  WARN 18234 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "received_messages" does not exist, skipping
+2022-03-08 16:26:13.863  INFO 18234 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-08 16:26:13.886  INFO 18234 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-08 16:26:16.002  INFO 18234 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-03-08 16:26:19.551  INFO 18234 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-03-08 16:26:19.558  INFO 18234 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-03-08 16:26:19.689  INFO 18234 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#5e34a84b:0/SimpleConnection@4eab9aec [delegate=amqp://guest@127.0.0.1:5672/, localPort= 39142]
+2022-03-08 16:26:19.901  INFO 18234 --- [main] c.r.m.ConsumerServiceApplication         : Started ConsumerServiceApplication in 14.875 seconds (JVM running for 17.371)
+2022-03-08 16:26:20.351  INFO 18234 --- [RMI TCP Connection(1)-192.168.0.12] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-08 16:26:20.363  INFO 18234 --- [RMI TCP Connection(1)-192.168.0.12] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-08 16:26:20.369  INFO 18234 --- [RMI TCP Connection(1)-192.168.0.12] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2022-03-08 16:47:14.266  INFO 18234 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.r.m.listener.MessageListener           : Received new message: time_time
+2022-03-08 16:57:21.479  INFO 18234 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.r.m.listener.MessageListener           : Received new message: time1
+2022-03-08 17:56:18.116  INFO 18234 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-03-08 17:56:18.188  INFO 18234 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-03-08 17:56:18.473  INFO 18234 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-08 17:56:18.491  INFO 18234 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-03-08 17:56:18.616  INFO 18234 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-08 17:56:18.659  INFO 18234 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-03-08 17:56:30.640  INFO 27772 --- [main] c.r.m.ConsumerServiceApplication         : Starting ConsumerServiceApplication using Java 1.8.0_202 on xx with PID 27772 (/home/evgeniy/IdeaProjects/consumer-service/target/classes started by evgeniy in /home/evgeniy/IdeaProjects/consumer-service)
+2022-03-08 17:56:30.648  INFO 27772 --- [main] c.r.m.ConsumerServiceApplication         : No active profile set, falling back to default profiles: default
+2022-03-08 17:56:32.459  INFO 27772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-08 17:56:32.551  INFO 27772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 1 JPA repository interfaces.
+2022-03-08 17:56:33.381  INFO 27772 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-03-08 17:56:33.391  INFO 27772 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-08 17:56:33.392  INFO 27772 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2022-03-08 17:56:33.477  INFO 27772 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-08 17:56:33.478  INFO 27772 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2650 ms
+2022-03-08 17:56:34.021  INFO 27772 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-08 17:56:34.067  INFO 27772 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-03-08 17:56:34.235  INFO 27772 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-08 17:56:34.416  INFO 27772 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-08 17:56:34.799  INFO 27772 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-08 17:56:34.816  INFO 27772 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2022-03-08 17:56:35.671  WARN 27772 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2022-03-08 17:56:35.671  WARN 27772 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "received_messages" does not exist, skipping
+2022-03-08 17:56:35.718  INFO 27772 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-08 17:56:35.731  INFO 27772 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-08 17:56:37.103  INFO 27772 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-03-08 17:56:37.249  INFO 27772 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-03-08 17:56:37.252  INFO 27772 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-03-08 17:56:37.298  INFO 27772 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#3ce7a354:0/SimpleConnection@36f80ceb [delegate=amqp://guest@127.0.0.1:5672/, localPort= 42148]
+2022-03-08 17:56:37.400  INFO 27772 --- [main] c.r.m.ConsumerServiceApplication         : Started ConsumerServiceApplication in 7.852 seconds (JVM running for 9.594)
+2022-03-08 17:56:37.589  INFO 27772 --- [RMI TCP Connection(2)-192.168.0.12] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-08 17:56:37.590  INFO 27772 --- [RMI TCP Connection(2)-192.168.0.12] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-08 17:56:37.594  INFO 27772 --- [RMI TCP Connection(2)-192.168.0.12] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-03-08 17:59:41.882  INFO 27772 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.r.m.listener.MessageListener           : Received new message: test_test
+2022-03-08 18:01:17.744  INFO 27772 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.r.m.listener.MessageListener           : Received new message: TTTTEST!
+2022-03-08 18:01:55.073  INFO 27772 --- [http-nio-8082-exec-2] c.r.m.controller.MessageController       : Fetch all messages
+2022-03-08 18:18:03.108  INFO 27772 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-03-08 18:18:03.953  INFO 27772 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-03-08 18:18:04.012  INFO 27772 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-08 18:18:04.012  INFO 27772 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-03-08 18:18:04.059  INFO 27772 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-08 18:18:04.087  INFO 27772 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
