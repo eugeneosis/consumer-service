@@ -9,12 +9,12 @@ spring:
     driverClassName: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/mq_consumer
     username: postgres
-    password: test123
+    password: password
   jpa:
     database: POSTGRESQL
     generate-ddl: true
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: validate
     open-in-view: false
     properties:
       hibernate:
